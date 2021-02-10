@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Text;
 using System.Web;
@@ -108,8 +109,11 @@ namespace BasicServerHTTPlistener
                 // Obtain a response object.
                 HttpListenerResponse response = context.Response;
 
+                //Do myMethods
+                Mymethods mymethods = new Mymethods(request.Url);
+
                 // Construct a response.
-                string responseString = "<HTML><BODY> Hello world!</BODY></HTML>";
+                string responseString = "<HTML><BODY>"+mymethods.displayAction()+"</BODY></HTML>";
                 byte[] buffer = System.Text.Encoding.UTF8.GetBytes(responseString);
                 // Get a response stream and write the response to it.
                 response.ContentLength64 = buffer.Length;
@@ -120,6 +124,51 @@ namespace BasicServerHTTPlistener
             }
             // Httplistener neither stop ... But Ctrl-C do that ...
             // listener.Stop();
+        }
+    }
+
+    internal class Mymethods
+    {
+        String[] segments = new string[5];
+        String param1;
+        String param2;
+        String param3;
+        String param4;
+
+        public Mymethods(Uri requestUrl)
+        {
+            int i = 0;
+            foreach (string str in requestUrl.Segments)
+            {
+
+                if (!str.Equals("/")) {
+                    segments[i] = str.Replace("/", "");
+                    i++;
+                }               
+            }
+            param1 = HttpUtility.ParseQueryString(requestUrl.Query).Get("param1");
+            param2 = HttpUtility.ParseQueryString(requestUrl.Query).Get("param2");
+            param3 = HttpUtility.ParseQueryString(requestUrl.Query).Get("param3");
+            param4 = HttpUtility.ParseQueryString(requestUrl.Query).Get("param4");
+        }
+
+        public String displayAction()
+        {
+            String res = "Action not recognize";
+            if (segments.Length > 3)
+            {
+                if (segments[2] =="hello" && param1 != null && param2 != null)
+                {
+                    res = displayParams1and2();
+                }
+                    
+            }
+            return res;
+        }
+
+        private String displayParams1and2()
+        {
+            return "Hello " + param1 + " et " + param2 + " ";
         }
     }
 }
