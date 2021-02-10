@@ -74,10 +74,6 @@ namespace BasicServerHTTPlistener
 
 
                 // Get the headers
-                System.Collections.Specialized.NameValueCollection aa = context.Request.Headers;
-
-                aa.ToString();
-
                 Header h = new Header(context.Request.Headers);
 
 
