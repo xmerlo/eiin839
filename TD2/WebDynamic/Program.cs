@@ -8,7 +8,7 @@ using System.Web;
 
 using System.Diagnostics;
 
-namespace BasicServerHTTPlistener
+namespace WebDynamic
 {
     internal class Program
     {
@@ -21,8 +21,8 @@ namespace BasicServerHTTPlistener
                 Console.WriteLine("A more recent Windows version is required to use the HttpListener class.");
                 return;
             }
- 
- 
+
+
             // Create a listener.
             HttpListener listener = new HttpListener();
 
@@ -74,7 +74,7 @@ namespace BasicServerHTTPlistener
                         documentContents = readStream.ReadToEnd();
                     }
                 }
-                
+
                 // get url 
                 Console.WriteLine($"Received request for {request.Url}");
 
@@ -115,7 +115,7 @@ namespace BasicServerHTTPlistener
                 Mymethods mymethods = new Mymethods(request.Url);
 
                 // Construct a response.
-                string responseString = "<HTML><BODY>"+mymethods.displayAction()+"</BODY></HTML>";
+                string responseString = "<HTML><BODY>" + mymethods.displayAction() + "</BODY></HTML>";
                 byte[] buffer = System.Text.Encoding.UTF8.GetBytes(responseString);
                 // Get a response stream and write the response to it.
                 response.ContentLength64 = buffer.Length;
@@ -143,10 +143,11 @@ namespace BasicServerHTTPlistener
             foreach (string str in requestUrl.Segments)
             {
 
-                if (!str.Equals("/")) {
+                if (!str.Equals("/"))
+                {
                     segments[i] = str.Replace("/", "");
                     i++;
-                }               
+                }
             }
             param1 = HttpUtility.ParseQueryString(requestUrl.Query).Get("param1");
             param2 = HttpUtility.ParseQueryString(requestUrl.Query).Get("param2");
@@ -159,14 +160,15 @@ namespace BasicServerHTTPlistener
             String res = "Action not recognize";
             if (segments.Length > 3)
             {
-                if (segments[2] =="question4" && param1 != null && param2 != null)
+                if (segments[2] == "question4" && param1 != null && param2 != null)
                 {
                     res = displayParams1and2();
                 }
-                else if (segments[2] == "question5" && param1 != null && param2 != null){
+                else if (segments[2] == "question5" && param1 != null && param2 != null)
+                {
                     res = getExecutable();
                 }
-                    
+
             }
             return res;
         }

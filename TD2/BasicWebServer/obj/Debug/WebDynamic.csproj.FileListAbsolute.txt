@@ -1,0 +1,7 @@
+C:\Users\xabme\Documents\ws\tout\eiin839\TD2\BasicWebServer\bin\Debug\BasicWebServer.exe.config
+C:\Users\xabme\Documents\ws\tout\eiin839\TD2\BasicWebServer\bin\Debug\BasicWebServer.exe
+C:\Users\xabme\Documents\ws\tout\eiin839\TD2\BasicWebServer\bin\Debug\BasicWebServer.pdb
+C:\Users\xabme\Documents\ws\tout\eiin839\TD2\BasicWebServer\obj\Debug\WebDynamic.csprojAssemblyReference.cache
+C:\Users\xabme\Documents\ws\tout\eiin839\TD2\BasicWebServer\obj\Debug\WebDynamic.csproj.CoreCompileInputs.cache
+C:\Users\xabme\Documents\ws\tout\eiin839\TD2\BasicWebServer\obj\Debug\BasicWebServer.exe
+C:\Users\xabme\Documents\ws\tout\eiin839\TD2\BasicWebServer\obj\Debug\BasicWebServer.pdb

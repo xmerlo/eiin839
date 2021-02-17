@@ -1,0 +1,13 @@
+C:\Users\xabme\Documents\ws\tout\eiin839\TD2\Exo5_external_call\bin\Debug\netcoreapp3.1\Exo5_external_call.exe
+C:\Users\xabme\Documents\ws\tout\eiin839\TD2\Exo5_external_call\bin\Debug\netcoreapp3.1\Exo5_external_call.deps.json
+C:\Users\xabme\Documents\ws\tout\eiin839\TD2\Exo5_external_call\bin\Debug\netcoreapp3.1\Exo5_external_call.runtimeconfig.json
+C:\Users\xabme\Documents\ws\tout\eiin839\TD2\Exo5_external_call\bin\Debug\netcoreapp3.1\Exo5_external_call.runtimeconfig.dev.json
+C:\Users\xabme\Documents\ws\tout\eiin839\TD2\Exo5_external_call\bin\Debug\netcoreapp3.1\Exo5_external_call.dll
+C:\Users\xabme\Documents\ws\tout\eiin839\TD2\Exo5_external_call\bin\Debug\netcoreapp3.1\Exo5_external_call.pdb
+C:\Users\xabme\Documents\ws\tout\eiin839\TD2\Exo5_external_call\obj\Debug\netcoreapp3.1\Exo5_external_call.csprojAssemblyReference.cache
+C:\Users\xabme\Documents\ws\tout\eiin839\TD2\Exo5_external_call\obj\Debug\netcoreapp3.1\Exo5_external_call.AssemblyInfoInputs.cache
+C:\Users\xabme\Documents\ws\tout\eiin839\TD2\Exo5_external_call\obj\Debug\netcoreapp3.1\Exo5_external_call.AssemblyInfo.cs
+C:\Users\xabme\Documents\ws\tout\eiin839\TD2\Exo5_external_call\obj\Debug\netcoreapp3.1\Exo5_external_call.csproj.CoreCompileInputs.cache
+C:\Users\xabme\Documents\ws\tout\eiin839\TD2\Exo5_external_call\obj\Debug\netcoreapp3.1\Exo5_external_call.dll
+C:\Users\xabme\Documents\ws\tout\eiin839\TD2\Exo5_external_call\obj\Debug\netcoreapp3.1\Exo5_external_call.pdb
+C:\Users\xabme\Documents\ws\tout\eiin839\TD2\Exo5_external_call\obj\Debug\netcoreapp3.1\Exo5_external_call.genruntimeconfig.cache
