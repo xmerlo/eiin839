@@ -6,8 +6,11 @@ namespace calc
     {
         static void Main(string[] args)
         {
-            Calculator.CalculatorSoap c = new Calculator.CalculatorSoapClient();
+            MyMathOperations.MathOperationsClient c = new MyMathOperations.MathOperationsClient();
             Console.WriteLine(c.Add(11, 11));
+            Console.WriteLine(c.Multiply(11, 11));
+            Console.WriteLine(c.Substract(11, 11));
+            Console.WriteLine(c.Divide(11, 11));
             Console.ReadLine();
         }
     }
