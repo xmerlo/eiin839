@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css" type="text/css">    <title>Let's go biking UI client</title>
+</head>
+<body onload="getLocation()">
+    <div id="Coordinates block">
+        <h2>Give coordinates of your destination</h2>
+        <label for="latitude">Latitude :</label>
+        <input name="latitudeInput" id="latitude">
+        <label for="longitude">Longitude :</label>
+        <input name="longitudeInput" id="longitude">
+        <button id="retrieveStationsAndItinaries" onclick="searchCoordinates();">Search</button>
+    </div>
+    <div id="Adress block">
+        <h2>Or give the adress of your destination</h2>
+        <label for="adress">Adress :</label>
+        <input name="adressInput" id="adress">
+
+        <button id="retrieveStationsAndItinaries" onclick="searchAdress();">Search</button>
+    </div>
+    <div id="map">
+	    <!-- Ici s'affichera la carte -->
+	  </div>
+    <p id="geolocalisationError"></p>
+    <script type="text/javascript" src="test.json"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js"></script>
+</body>
+</html>

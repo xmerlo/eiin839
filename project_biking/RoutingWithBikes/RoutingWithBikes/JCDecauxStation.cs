@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace WebProxyService
+﻿namespace RoutingWithBikes
 {
     class JCDecauxStation
     {
@@ -18,15 +12,5 @@ namespace WebProxyService
         {
             return contractName + "_" + number;
         }
-
-        /*internal void SetDistanceToGoal(double dist)
-        {
-            distanceToGoal = dist;
-        }
-
-        internal double GetDistanceToGoal()
-        {
-            return distanceToGoal;
-        }*/
     }
 }

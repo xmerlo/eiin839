@@ -1,15 +1,10 @@
 ﻿using Newtonsoft.Json.Linq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WebProxyService;
 
 namespace RoutingWithBikes
 {
     class Answer
     {
+        public string result { get; set; }
         public JCDecauxStationDetails station1 { get; set; }
         public JCDecauxStationDetails station2 { get; set; }
 
