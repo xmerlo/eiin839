@@ -28,7 +28,7 @@ Nous pouvons également faire les mêmes requêtes mais recevoir les données so
 - Appel avec une adresse : http://localhost:8734/Lets_go_biking/RoutingWithBikes/Service1/rest/GetSoapStationsAndItinary?lat=43.644132925978056&lon=1.4323214205002373&goalAdress=1%20Rue%20Claude-Marie%20Perroud%2C%2031000%20Toulouse
 -
 À noter qu'ici se sont que des appels REST, il y a le HeavyClient pour test des requêtes SOAP.
-Pour tester mon LightClientWeb, il suffit juste d'ouvrir le index.html sur un navigateur. Il vous simule une postition sur Toulouse (cf: [ LightWebClient (Interface web)]( ##LightWebClient (Interface web))).
+Pour tester mon LightClientWeb, il suffit juste d'ouvrir le index.html sur un navigateur. Il vous simule une postition sur Toulouse (cf: [ LightWebClient (Interface web)]( #LightWebClient (Interface web))).
 Voici quelques valeurs que vous pouvez mettre dans les formulaires pour avoir des valeures cohérentes :
 - latitude : 43.56359172881835
 - longitude : 1.4472526870014837
