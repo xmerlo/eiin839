@@ -3,7 +3,6 @@ using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
-using System.ServiceModel.Web;
 using System.Threading.Tasks;
 
 namespace RoutingWithBikes
@@ -15,14 +14,10 @@ namespace RoutingWithBikes
 
         public static string searchStationsAndItinaries(double lat, double lon, double lat2, double lon2, int distanceLimit)
         {
-            
-            
-
-            WebOperationContext.Current.OutgoingResponse.Headers.Add("Access-Control-Allow-Origin", "*");
             Answer answer = new Answer();
             try
             {
-                Task<string> response = client.GetStringAsync("http://localhost:8733/Design_Time_Addresses/WebProxyService/Service1/GetAllStations");
+                Task<string> response = client.GetStringAsync("http://localhost:8733/Lets_go_biking/WebProxyService/Service1/GetAllStations");
 
                 response.Wait();
 
@@ -44,7 +39,7 @@ namespace RoutingWithBikes
                 JCDecauxStationDetails s1 = null;
                 foreach (JCDecauxStation station in stations1)
                 {
-                    Task<string> responseS1 = client.GetStringAsync("http://localhost:8733/Design_Time_Addresses/WebProxyService/Service1/GetStation?contract=" + station.contractName + "&number=" + station.number);
+                    Task<string> responseS1 = client.GetStringAsync("http://localhost:8733/Lets_go_biking/WebProxyService/Service1/GetStation?contract=" + station.contractName + "&number=" + station.number);
                     responseS1.Wait();
                     JCDecauxStationDetails s = JsonConvert.DeserializeObject<JCDecauxStationDetails>(responseS1.Result);
                     if (s.totalStands.availabilities.bikes > 0)
@@ -60,7 +55,7 @@ namespace RoutingWithBikes
                 JCDecauxStationDetails s2 = null;
                 foreach (JCDecauxStation station in stations2)
                 {
-                    Task<string> responseS2 = client.GetStringAsync("http://localhost:8733/Design_Time_Addresses/WebProxyService/Service1/GetStation?contract=" + station.contractName + "&number=" + station.number);
+                    Task<string> responseS2 = client.GetStringAsync("http://localhost:8733/Lets_go_biking/WebProxyService/Service1/GetStation?contract=" + station.contractName + "&number=" + station.number);
                     responseS2.Wait();
                     JCDecauxStationDetails s = JsonConvert.DeserializeObject<JCDecauxStationDetails>(responseS2.Result);
                     if (s.totalStands.availabilities.bikes > 0)
@@ -71,7 +66,7 @@ namespace RoutingWithBikes
 
                 }
 
-                if (s1.number != s2.number || s1.number == s2.number)
+                if (s1.number != s2.number)
                 {
                     
 

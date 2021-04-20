@@ -9,6 +9,7 @@ namespace RoutingWithBikes
 
         public Stream GetRestStationsAndItinary(double lat, double lon, double lat2, double lon2, string startAdress, string goalAdress, int distanceLimit)
         {
+            WebOperationContext.Current.OutgoingResponse.Headers.Add("Access-Control-Allow-Origin", "*");
 
             if (startAdress != null)
             {
@@ -31,6 +32,8 @@ namespace RoutingWithBikes
 
         public string GetSoapStationsAndItinary(double lat, double lon, double lat2, double lon2, string startAdress, string goalAdress, int distanceLimit)
         {
+            WebOperationContext.Current.OutgoingResponse.Headers.Add("Access-Control-Allow-Origin", "*");
+
             if (startAdress != null)
             {
                 Position coordinates = Utils.adressToCoordinates(startAdress);

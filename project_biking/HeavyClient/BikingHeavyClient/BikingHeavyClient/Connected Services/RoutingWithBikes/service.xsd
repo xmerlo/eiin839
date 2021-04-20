@@ -4,10 +4,13 @@
   <xs:element name="GetRestStationsAndItinary">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="x" type="xs:double" />
-        <xs:element minOccurs="0" name="y" type="xs:double" />
-        <xs:element minOccurs="0" name="x2" type="xs:double" />
-        <xs:element minOccurs="0" name="y2" type="xs:double" />
+        <xs:element minOccurs="0" name="lat" type="xs:double" />
+        <xs:element minOccurs="0" name="lon" type="xs:double" />
+        <xs:element minOccurs="0" name="lat2" type="xs:double" />
+        <xs:element minOccurs="0" name="lon2" type="xs:double" />
+        <xs:element minOccurs="0" name="startAdress" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="goalAdress" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="distanceLimit" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -21,10 +24,13 @@
   <xs:element name="GetSoapStationsAndItinary">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="x" type="xs:double" />
-        <xs:element minOccurs="0" name="y" type="xs:double" />
-        <xs:element minOccurs="0" name="x2" type="xs:double" />
-        <xs:element minOccurs="0" name="y2" type="xs:double" />
+        <xs:element minOccurs="0" name="lat" type="xs:double" />
+        <xs:element minOccurs="0" name="lon" type="xs:double" />
+        <xs:element minOccurs="0" name="lat2" type="xs:double" />
+        <xs:element minOccurs="0" name="lon2" type="xs:double" />
+        <xs:element minOccurs="0" name="startAdress" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="goalAdress" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="distanceLimit" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

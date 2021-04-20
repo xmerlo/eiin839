@@ -52,7 +52,7 @@
   </wsdl:binding>
   <wsdl:service name="Service1">
     <wsdl:port name="SOAPEndPoint" binding="tns:SOAPEndPoint">
-      <soap:address location="http://localhost:8734/Design_Time_Addresses/RoutingWithBikes/Service1/soap" />
+      <soap:address location="http://localhost:8734/Lets_go_biking/RoutingWithBikes/Service1/soap" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

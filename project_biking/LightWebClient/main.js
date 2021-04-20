@@ -9,7 +9,7 @@ function searchCoordinates() {
     destinationLatitude = document.getElementById("latitude").value.replace(',','.')
     destinationLongitude = document.getElementById("longitude").value.replace(',','.')
 
-    var url = "http://localhost:8734/Design_Time_Addresses/RoutingWithBikes/Service1/rest/GetRestStationsAndItinary?lat="+userLatitude+"&lon="+userLongitude+"&lat2="+destinationLatitude+"&lon2="+destinationLongitude
+    var url = "http://localhost:8734/Lets_go_biking/RoutingWithBikes/Service1/rest/GetRestStationsAndItinary?lat="+userLatitude+"&lon="+userLongitude+"&lat2="+destinationLatitude+"&lon2="+destinationLongitude
 
     var requestType = "GET";
     var caller = new XMLHttpRequest();
@@ -22,7 +22,7 @@ function searchCoordinates() {
 function searchAdress() {
     let adress = encodeURI(document.getElementById("adress").value)
 
-    var url = "http://localhost:8734/Design_Time_Addresses/RoutingWithBikes/Service1/rest/GetRestStationsAndItinary?lat="+userLatitude+"&lon="+userLongitude+"&goalAdress="+adress
+    var url = "http://localhost:8734/Lets_go_biking/RoutingWithBikes/Service1/rest/GetRestStationsAndItinary?lat="+userLatitude+"&lon="+userLongitude+"&goalAdress="+adress
 
     var requestType = "GET";
     var caller = new XMLHttpRequest();
@@ -113,5 +113,4 @@ var vector = new ol.layer.Vector({
 });
 
 map.addLayer(vector);
-console.log("alo")
 }

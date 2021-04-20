@@ -8,33 +8,33 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BikingHeavyClient.ServiceReference1 {
+namespace BikingHeavyClient.RoutingWithBikes {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IService1")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="RoutingWithBikes.IService1")]
     public interface IService1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetRestStationsAndItinary", ReplyAction="http://tempuri.org/IService1/GetRestStationsAndItinaryResponse")]
-        System.IO.Stream GetRestStationsAndItinary(double x, double y, double x2, double y2);
+        System.IO.Stream GetRestStationsAndItinary(double lat, double lon, double lat2, double lon2, string startAdress, string goalAdress, int distanceLimit);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetRestStationsAndItinary", ReplyAction="http://tempuri.org/IService1/GetRestStationsAndItinaryResponse")]
-        System.Threading.Tasks.Task<System.IO.Stream> GetRestStationsAndItinaryAsync(double x, double y, double x2, double y2);
+        System.Threading.Tasks.Task<System.IO.Stream> GetRestStationsAndItinaryAsync(double lat, double lon, double lat2, double lon2, string startAdress, string goalAdress, int distanceLimit);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetSoapStationsAndItinary", ReplyAction="http://tempuri.org/IService1/GetSoapStationsAndItinaryResponse")]
-        string GetSoapStationsAndItinary(double x, double y, double x2, double y2);
+        string GetSoapStationsAndItinary(double lat, double lon, double lat2, double lon2, string startAdress, string goalAdress, int distanceLimit);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetSoapStationsAndItinary", ReplyAction="http://tempuri.org/IService1/GetSoapStationsAndItinaryResponse")]
-        System.Threading.Tasks.Task<string> GetSoapStationsAndItinaryAsync(double x, double y, double x2, double y2);
+        System.Threading.Tasks.Task<string> GetSoapStationsAndItinaryAsync(double lat, double lon, double lat2, double lon2, string startAdress, string goalAdress, int distanceLimit);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IService1Channel : BikingHeavyClient.ServiceReference1.IService1, System.ServiceModel.IClientChannel {
+    public interface IService1Channel : BikingHeavyClient.RoutingWithBikes.IService1, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class Service1Client : System.ServiceModel.ClientBase<BikingHeavyClient.ServiceReference1.IService1>, BikingHeavyClient.ServiceReference1.IService1 {
+    public partial class Service1Client : System.ServiceModel.ClientBase<BikingHeavyClient.RoutingWithBikes.IService1>, BikingHeavyClient.RoutingWithBikes.IService1 {
         
         public Service1Client() {
         }
@@ -55,20 +55,20 @@ namespace BikingHeavyClient.ServiceReference1 {
                 base(binding, remoteAddress) {
         }
         
-        public System.IO.Stream GetRestStationsAndItinary(double x, double y, double x2, double y2) {
-            return base.Channel.GetRestStationsAndItinary(x, y, x2, y2);
+        public System.IO.Stream GetRestStationsAndItinary(double lat, double lon, double lat2, double lon2, string startAdress, string goalAdress, int distanceLimit) {
+            return base.Channel.GetRestStationsAndItinary(lat, lon, lat2, lon2, startAdress, goalAdress, distanceLimit);
         }
         
-        public System.Threading.Tasks.Task<System.IO.Stream> GetRestStationsAndItinaryAsync(double x, double y, double x2, double y2) {
-            return base.Channel.GetRestStationsAndItinaryAsync(x, y, x2, y2);
+        public System.Threading.Tasks.Task<System.IO.Stream> GetRestStationsAndItinaryAsync(double lat, double lon, double lat2, double lon2, string startAdress, string goalAdress, int distanceLimit) {
+            return base.Channel.GetRestStationsAndItinaryAsync(lat, lon, lat2, lon2, startAdress, goalAdress, distanceLimit);
         }
         
-        public string GetSoapStationsAndItinary(double x, double y, double x2, double y2) {
-            return base.Channel.GetSoapStationsAndItinary(x, y, x2, y2);
+        public string GetSoapStationsAndItinary(double lat, double lon, double lat2, double lon2, string startAdress, string goalAdress, int distanceLimit) {
+            return base.Channel.GetSoapStationsAndItinary(lat, lon, lat2, lon2, startAdress, goalAdress, distanceLimit);
         }
         
-        public System.Threading.Tasks.Task<string> GetSoapStationsAndItinaryAsync(double x, double y, double x2, double y2) {
-            return base.Channel.GetSoapStationsAndItinaryAsync(x, y, x2, y2);
+        public System.Threading.Tasks.Task<string> GetSoapStationsAndItinaryAsync(double lat, double lon, double lat2, double lon2, string startAdress, string goalAdress, int distanceLimit) {
+            return base.Channel.GetSoapStationsAndItinaryAsync(lat, lon, lat2, lon2, startAdress, goalAdress, distanceLimit);
         }
     }
 }
