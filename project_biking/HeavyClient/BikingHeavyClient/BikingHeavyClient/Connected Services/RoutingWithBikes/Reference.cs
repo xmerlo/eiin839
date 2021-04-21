@@ -26,6 +26,12 @@ namespace BikingHeavyClient.RoutingWithBikes {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetSoapStationsAndItinary", ReplyAction="http://tempuri.org/IService1/GetSoapStationsAndItinaryResponse")]
         System.Threading.Tasks.Task<string> GetSoapStationsAndItinaryAsync(double lat, double lon, double lat2, double lon2, string startAdress, string goalAdress, int distanceLimit);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetStatistics", ReplyAction="http://tempuri.org/IService1/GetStatisticsResponse")]
+        string GetStatistics();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetStatistics", ReplyAction="http://tempuri.org/IService1/GetStatisticsResponse")]
+        System.Threading.Tasks.Task<string> GetStatisticsAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -69,6 +75,14 @@ namespace BikingHeavyClient.RoutingWithBikes {
         
         public System.Threading.Tasks.Task<string> GetSoapStationsAndItinaryAsync(double lat, double lon, double lat2, double lon2, string startAdress, string goalAdress, int distanceLimit) {
             return base.Channel.GetSoapStationsAndItinaryAsync(lat, lon, lat2, lon2, startAdress, goalAdress, distanceLimit);
+        }
+        
+        public string GetStatistics() {
+            return base.Channel.GetStatistics();
+        }
+        
+        public System.Threading.Tasks.Task<string> GetStatisticsAsync() {
+            return base.Channel.GetStatisticsAsync();
         }
     }
 }

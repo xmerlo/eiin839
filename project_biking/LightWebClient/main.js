@@ -41,9 +41,41 @@ function manageResult() {
       drawLine(response.startToS1.features[0].geometry.coordinates, "green");
       drawLine(response.s1ToS2.features[0].geometry.coordinates, "blue");
       drawLine(response.s2ToGoal.features[0].geometry.coordinates, "red");
+      printInstructions(response)
     }
     else alert(response.result)
 
+}
+
+function printInstructions(response) {
+  var datalist = document.createElement("ul")
+  datalist.setAttribute("id", "list")
+
+  response.startToS1.features[0].properties.segments[0].steps.map(step => {
+    var inst = document.createElement("li")
+    inst.innerHTML=step.instruction;
+    datalist.appendChild(inst)
+  })
+  var takeABike = document.createElement("li")
+  takeABike.innerHTML="Take a bike";
+  datalist.appendChild(takeABike)
+
+  response.s1ToS2.features[0].properties.segments[0].steps.map(step => {
+    var inst = document.createElement("li")
+    inst.innerHTML=step.instruction;
+    datalist.appendChild(inst)
+  })
+  var layYourBike = document.createElement("li")
+  layYourBike.innerHTML="Lay your bike";
+  datalist.appendChild(layYourBike)
+
+  response.s2ToGoal.features[0].properties.segments[0].steps.map(step => {
+    var inst = document.createElement("li")
+    inst.innerHTML=step.instruction;
+    datalist.appendChild(inst)
+  })
+
+  document.getElementById("instructions").appendChild(datalist)
 }
 
 function getLocation() {

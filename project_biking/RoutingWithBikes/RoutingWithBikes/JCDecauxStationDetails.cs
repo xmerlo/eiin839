@@ -1,6 +1,6 @@
 ﻿namespace RoutingWithBikes
 {
-    class JCDecauxStationDetails
+    public class JCDecauxStationDetails
     {
 
         public int number { get; set; }
@@ -13,20 +13,37 @@
         {
             return contractName + "_" + number;
         }
+
+        public override bool Equals(object obj)
+        {
+
+            var item = obj as JCDecauxStationDetails;
+
+            if (item == null)
+            {
+                return false;
+            }
+            return item.number.Equals(number);
+        }
+
+        public override int GetHashCode()
+        {
+            return this.number;
+        }
     }
 
-    class Position
+    public class Position
     {
         public double latitude { get; set; }
         public double longitude { get; set; }
     }
 
-    class TotalStands
+    public class TotalStands
     {
         public Availabilities availabilities { get; set; }
     }
 
-    class Availabilities
+    public class Availabilities
     {
         public int bikes { get; set; }
     }

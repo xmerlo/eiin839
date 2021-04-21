@@ -1,5 +1,18 @@
-#map{ /* la carte DOIT avoir une hauteur sinon elle n'apparaît pas */
-    height:700px;
-    width:500px;
-    margin:15px;
+#map{
+  height:700px;
+  width:500px;
+  margin:15px;
+}
+
+#instructions{
+  width: 400px;
+}
+
+#list{
+  overflow: scroll;
+  height: 643px;
+}
+
+#results{
+  display: flex;
 }

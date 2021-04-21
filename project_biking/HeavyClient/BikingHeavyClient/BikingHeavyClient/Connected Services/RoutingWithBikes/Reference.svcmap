@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="505654e7-4122-47f8-82b9-17f6eaca1fa3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ef1d0285-62b8-4a38-a0e8-d04517becbd1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,10 +22,10 @@
     <MetadataSource Address="http://localhost:8734/Lets_go_biking/RoutingWithBikes/Service1/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="05b3a3c9-70e8-4a85-b1a4-cb8bb11a8878" SourceId="1" SourceUrl="http://localhost:8734/Lets_go_biking/RoutingWithBikes/Service1/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="e32e18bc-a952-4f3e-9f7a-48476bcc83c1" SourceId="1" SourceUrl="http://localhost:8734/Lets_go_biking/RoutingWithBikes/Service1/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="3c85c83e-f31d-4f93-bb09-429011ac15c4" SourceId="1" SourceUrl="http://localhost:8734/Lets_go_biking/RoutingWithBikes/Service1/mex" />
-    <MetadataFile FileName="Message.xsd" MetadataType="Schema" ID="59280d73-29c8-4f50-ae24-d22bde77927b" SourceId="1" SourceUrl="http://localhost:8734/Lets_go_biking/RoutingWithBikes/Service1/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="97f0e21e-1e14-4c91-8083-f67b1c44f98b" SourceId="1" SourceUrl="http://localhost:8734/Lets_go_biking/RoutingWithBikes/Service1/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="2d5ef678-53c2-43c3-9123-373adb83b80d" SourceId="1" SourceUrl="http://localhost:8734/Lets_go_biking/RoutingWithBikes/Service1/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="3f336445-5bdc-4076-b304-bb2958aadb34" SourceId="1" SourceUrl="http://localhost:8734/Lets_go_biking/RoutingWithBikes/Service1/mex" />
+    <MetadataFile FileName="Message.xsd" MetadataType="Schema" ID="ea8da8f8-df39-4e88-939a-59c6028e0b26" SourceId="1" SourceUrl="http://localhost:8734/Lets_go_biking/RoutingWithBikes/Service1/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel;
@@ -24,6 +25,15 @@ namespace BikingHeavyClient
             Console.WriteLine("Itinary with just adresses :");
             Console.WriteLine("____________________________");
             Console.WriteLine(s.GetSoapStationsAndItinary(43.567221153708445, 1.467678323560479, 0, 0, null, "1 Rue Claude-Marie Perroud, 31000 Toulouse", 0));
+            Console.WriteLine("____________________________");
+            Console.WriteLine("Statistics :");
+            Dictionary<string, int> statistics = JsonConvert.DeserializeObject<Dictionary<string, int>>(s.GetStatistics());
+            foreach (KeyValuePair<string, int> stat in statistics)
+            {
+                Console.WriteLine("Station: {0}, Request number: {1}",
+                    stat.Key, stat.Value);
+            }
+            Console.WriteLine();
             Console.ReadLine();
         }
     }

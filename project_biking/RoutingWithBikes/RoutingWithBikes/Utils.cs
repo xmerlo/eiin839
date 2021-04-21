@@ -73,6 +73,14 @@ namespace RoutingWithBikes
                     answer.station1 = s1;
                     answer.station2 = s2;
 
+                    if (Service1.statistics.ContainsKey(s1))
+                        Service1.statistics[s1] = Service1.statistics[s1] + 1;
+                    else Service1.statistics[s1] = 1;
+
+                    if (Service1.statistics.ContainsKey(s2))
+                        Service1.statistics[s2] = Service1.statistics[s2] + 1;
+                    else Service1.statistics[s2] = 1;
+
 
                     //Start to station 1
                     string urlStartToS1 = "https://api.openrouteservice.org/v2/directions/foot-walking?api_key=" + api_key + "&start=" + lon.ToString("0.00000000000000000", System.Globalization.CultureInfo.InvariantCulture) + "," + lat.ToString("0.00000000000000000", System.Globalization.CultureInfo.InvariantCulture) + "&end=" + s1.position.longitude.ToString("0.00000000000000000", System.Globalization.CultureInfo.InvariantCulture) + "," + s1.position.latitude.ToString("0.00000000000000000", System.Globalization.CultureInfo.InvariantCulture);
